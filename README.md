@@ -27,6 +27,7 @@ None of the variables below are required.
 | `dnsmasq_domain`           | -       | The domain for Dnsmasq.                                                                                                                                   |
 | `dnsmasq_expand_hosts`     | `false` | Set this (and `dnsmasq_domain`) if you want to have a domain automatically added to simple names in a hosts-file.                                         |
 | `dnsmasq_listen_address`   | -       | The IP address of the interface that should listen to DNS/DHCP requests.                                                                                  |
+| `dnsmasq_no_resolv`   | -       | Set to `true` if dnsmasq should not read /etc/resolv.conf. This option only works if `dnsmasq_upstream_servers` is set                                    |
 | `dnsmasq_interface`        | -       | The network interface that should listen to DNS/DHCP requests.                                                                                            |
 | `dnsmasq_option_router`    | -       | The default gateway to be sent to clients.                                                                                                                |
 | `dnsmasq_port`             | -       | Set this to listen on a custom port.                                                                                                                      |
