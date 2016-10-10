@@ -78,4 +78,16 @@ dhcp-script={{dnsmasq_dhcp_script}}
 
 {% endif %}
 
+{% if dnsmasq_dhcp_option is defined %}
+{% if dnsmasq_dhcp_option is string %}
+dhcp-option={{ dnsmasq_dhcp_option }}
+
+{% elif dnsmasq_dhcp_option is iterable %}
+{% for option in dnsmasq_dhcp_option %}
+dhcp-option={{ option }}
+
+{% endfor %}
+{% endif %}
+{% endif %}
+
 conf-dir=/etc/dnsmasq.d
